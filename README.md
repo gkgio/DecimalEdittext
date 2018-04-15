@@ -11,6 +11,7 @@
         app:hint_text="Введите сумму покупки"
         app:integer_part="11" />
 
+```
 
 ## Bugs and Feedback
 
