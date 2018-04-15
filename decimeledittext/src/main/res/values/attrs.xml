@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextDecimalSpaceSeparator">
+        <attr name="integer_part" format="integer" />
+        <attr name="decimal_part" format="integer" />
+        <attr name="hint_text" format="string" />
+    </declare-styleable>
+</resources>

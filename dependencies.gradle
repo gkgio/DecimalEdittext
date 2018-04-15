@@ -1,0 +1,40 @@
+ext.versions = [
+		// Version
+		code                   : 1,
+		name                   : '1.0.1',
+
+		// Android Versions
+		compileSdk             : 27,
+		targetSdk              : 27,
+		minSdk                 : 15,
+		buildTools             : '27.0.3',
+
+		// Gradle Versions
+		androidGradlePlugin    : '3.0.1',
+		mavenGradlePlugin      : '1.4.1',
+		bintrayGradlePlugin    : '1.7.1',
+
+		// Dependency Versions
+		supportLibrary         : '27.1.1',
+
+		// Testing dependencies
+		jUnit                  : '4.12'
+]
+
+ext.gradlePlugins = [
+		android    : "com.android.tools.build:gradle:$versions.androidGradlePlugin",
+		maven      : "com.github.dcendents:android-maven-gradle-plugin:$versions.mavenGradlePlugin",
+		bintray    : "com.jfrog.bintray.gradle:gradle-bintray-plugin:$versions.bintrayGradlePlugin"
+]
+
+ext.libraries = [
+		// DecimelEditext dependencies
+		supportAnnotations: "com.android.support:support-annotations:$versions.supportLibrary",
+
+		// Sample dependencies
+		appCompat         : "com.android.support:appcompat-v7:$versions.supportLibrary",
+
+		// Test dependencies
+		jUnit             : "junit:junit:$versions.jUnit",
+
+]
