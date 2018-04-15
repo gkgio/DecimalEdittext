@@ -1,0 +1,89 @@
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def libName = 'DecimelEdittext'
+def libDescription =  'Android library to use writing decimel value in edttext'
+def mavenPackageType = 'aar'
+def mavenDeveloperId = 'gkgio'
+def mavenDeveloperName = 'Georgy Gigauri'
+def mavenDeveloperEmail = 'eeyyon@gmail.com'
+def libWebsite = "https://github.com/gkgio/DecimelEdittext"
+def libGit = "https://github.com/gkgio/DecimelEdittext.git"
+
+def versionTag = versions.name.toString()
+
+bintray {
+    user = bintray_user
+    key = bintray_key
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = libName
+        desc = libDescription
+        websiteUrl = libWebsite
+        issueTrackerUrl = "https://github.com/gkgio/DecimelEdittext/issues"
+        vcsUrl = libGit
+        licenses = ['Apache-2.0']
+        labels = ['aar', 'android', 'decimeledittext']
+        version {
+            name = versionTag
+            released = new Date()
+            vcsTag = versionTag
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            packaging mavenPackageType
+            name libName
+            url libWebsite
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                }
+            }
+            developers {
+                developer {
+                    id mavenDeveloperId
+                    name mavenDeveloperName
+                    email mavenDeveloperEmail
+                }
+            }
+            scm {
+                connection libGit
+                developerConnection libGit
+                url libWebsite
+
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task bintrayPublish(dependsOn: [javadocJar, sourcesJar, install, bintrayUpload]) {
+    // everything is done in the depending tasks
+}
