@@ -89,10 +89,6 @@ public class EditTextDecimalSpaceSeparator extends android.support.v7.widget.App
                 } else {
                     if (!isEmpty(dest)) {
 
-                        //check 0 in start of string
-                        if ("0".equals(source.toString()) && dstart == 0)
-                            return "";
-
                         //remove space if exist
                         String destVal = dest.toString();
                         if (destVal.contains(" ")) {
