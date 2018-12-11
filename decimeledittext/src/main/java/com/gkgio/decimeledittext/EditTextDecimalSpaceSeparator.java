@@ -121,10 +121,6 @@ public class EditTextDecimalSpaceSeparator extends android.support.v7.widget.App
                     }
                 }
             }
-        } else if (dest.toString().length() == 0) {
-            //check 0 input in empty string
-            if ("0".equals(source.toString()) && dest.toString().length() == 0)
-                return "";
         }
         return null;
     }
@@ -149,7 +145,9 @@ public class EditTextDecimalSpaceSeparator extends android.support.v7.widget.App
 
         if (!isEmpty(s)) {
             //delete 0 if it in the start position
-            if (s.toString().toCharArray()[0] == '0' && start == 0)
+            if (s.toString().length() >= 2 && (s.toString().substring(0,2).equals("00")
+                    || (s.toString().substring(0,1).equals("0")
+                    && s.toString().substring(1,2).matches("\\d+"))))
                 setText(s.toString().substring(1));
 
             if (s.toString().contains(".")) {
