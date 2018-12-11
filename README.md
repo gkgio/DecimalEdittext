@@ -8,7 +8,7 @@
         android:textColorHint="@color/grey_dark"
         android:textSize="16sp"
         app:decimal_part="2"
-        app:hint_text="Введите сумму покупки"
+        app:hint_text="Write sum of money"
         app:integer_part="11" />
 
 ```
