@@ -3,13 +3,13 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 def libName = 'DecimelEdittext'
-def libDescription =  'Android library to use writing decimel value in edttext'
+def libDescription =  'Android library to use writing decimal value in edttext'
 def mavenPackageType = 'aar'
 def mavenDeveloperId = 'gkgio'
 def mavenDeveloperName = 'Georgy Gigauri'
 def mavenDeveloperEmail = 'eeyyon@gmail.com'
-def libWebsite = "https://github.com/gkgio/DecimelEdittext"
-def libGit = "https://github.com/gkgio/DecimelEdittext.git"
+def libWebsite = "https://github.com/gkgio/DecimalEdittext"
+def libGit = "https://github.com/gkgio/DecimalEdittext.git"
 
 def versionTag = versions.name.toString()
 
@@ -22,10 +22,10 @@ bintray {
         name = libName
         desc = libDescription
         websiteUrl = libWebsite
-        issueTrackerUrl = "https://github.com/gkgio/DecimelEdittext/issues"
+        issueTrackerUrl = "https://github.com/gkgio/DecimalEdittext/issues"
         vcsUrl = libGit
         licenses = ['Apache-2.0']
-        labels = ['aar', 'android', 'decimeledittext']
+        labels = ['aar', 'android', 'decimaledittext']
         version {
             name = versionTag
             released = new Date()

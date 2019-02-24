@@ -28,7 +28,7 @@ ext.gradlePlugins = [
 ]
 
 ext.libraries = [
-		// DecimelEditext dependencies
+		// DecimalEditText dependencies
 		supportAnnotations: "com.android.support:support-annotations:$versions.supportLibrary",
 
 		// Sample dependencies

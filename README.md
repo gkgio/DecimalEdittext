@@ -1,8 +1,8 @@
-#DecimelEdittext: Android library for created edittext for decimel values
+#DecimalEdittext: Android library for created edittext for decimal values
 
 ``` xml
 
-    <com.gkgio.decimeledittext.EditTextDecimalSpaceSeparator
+    <com.gkgio.decimaledittext.EditTextDecimalSpaceSeparator
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:textColorHint="@color/grey_dark"
@@ -15,4 +15,4 @@
 
 ## Bugs and Feedback
 
-For bugs, questions and discussions please use the [Github Issues](https://github.com/gkgio/DecimelEdittext/issues).
+For bugs, questions and discussions please use the [Github Issues](https://github.com/gkgio/DecimalEdittext/issues).

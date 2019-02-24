@@ -1,4 +1,4 @@
-package com.gkgio.decimeledittext;
+package com.gkgio.decimaledittext;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import static com.gkgio.decimeledittext.Utils.isEmpty;
+import static com.gkgio.decimaledittext.Utils.isEmpty;
 
 /**
  * Created by Gigauri on 15.04.18.

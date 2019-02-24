@@ -1,4 +1,4 @@
-package com.gkgio.decimeledittext;
+package com.gkgio.decimaledittext;
 
 /**
  * Created by Gigauri on 15.04.18.
